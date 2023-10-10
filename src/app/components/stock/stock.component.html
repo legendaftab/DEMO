@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="card">
+        <div class="card-header bg-primary">
+            Stock Details
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>sr no.</th>
+                        <th>productName</th>
+                        <th>createdDate</th>
+                        <th>lastModifiedDate</th>
+                        <th>quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let st of stockList;let idx=index">
+                        <td>{{idx + 1}}</td>
+                        <td>{{st.productName}}</td>
+                        <td>{{st.createdDate |date:'dd-MMM-yyyy'}}</td>
+                        <td>{{st.lastModifiedDate |date:'dd-MMM-yyyy'}}</td>
+                        <td [ngClass]="st.quantity==0? 'bg-danger':'bg-warning'">{{st.quantity}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

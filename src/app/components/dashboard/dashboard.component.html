@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-4" *ngFor="let da of dashArray">
+        <div class="card">
+            <div class="card-header bg-primary">All inventary Info</div>
+            <div class="card-body">
+             <h3>Products:{{da.totalProducts}}</h3>
+             <h3>Purchase:{{da.totalPurchase}}</h3>
+             <h3>Sale{{da.totalSale}}</h3>
+             <p>Stock{{da.zeroStockProducts}}</p>
+            </div>
+        </div>
+    </div>
+</div>

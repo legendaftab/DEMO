@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="card">
+        <div class="card-header bg-primary">
+            New purchase
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6">
+                    <label for="">invoice number</label>
+                    <input type="text" name=""  class="form-control"  [(ngModel)]="purchasedObj.invoiceNo">
+                </div>
+                <div class="col-6">
+                    <label for="">supplier </label>
+                    <input type="text" name=""  class="form-control" [(ngModel)]="purchasedObj.supplierName">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label for="">purchased Date</label>
+                    <input type="date" class="form-control" [(ngModel)]="purchasedObj.purchaseDate">
+                </div>
+            
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <label for="">select product</label>
+                    <select class="form-control" [(ngModel)]="purchasedObj.productId">
+                        <option value="">select product</option>
+                        <option  *ngFor="let item of productList" [value]="item.productId">{{item.productName}}</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label for="">Quantity </label>
+                    <input type="text" name=""  class="form-control" [(ngModel)]="purchasedObj.quantity">
+                </div>
+                <div class="col-4">
+                    <label for="">Total Amount </label>
+                    <input type="text" name=""  class="form-control" [(ngModel)]="purchasedObj.invoiceAmount">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4 mt-2">
+                     <button class="btn btn-sm btn-secondary" routerLink="/purchase-List">Go to list</button>
+                </div>
+                <div class="col-4 mt-2">
+                    <button class="btn btn-sm btn-success" (click)="onSave()">Save purchase</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

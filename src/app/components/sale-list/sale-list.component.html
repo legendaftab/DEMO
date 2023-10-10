@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-12 mt-1 text-end">
+        <button class="btn btn-sm btn-success" routerLink="/sale">New Sale</button>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-3 mx-2" *ngFor="let item of saleList">
+        <div class="row">
+            
+                <div class="card mt-2" style="width: 250px;">
+                    <div class="card-header bg-secondary ">employee Data</div>
+                    <div class="card-body">
+                        <p>productName:{{item.productName}}</p>
+                        <p>:Invoice number:{{item.invoiceNo}}</p>
+                        <p>product name:{{item.productName}}</p>
+                        <p>Quantity:{{item.quantity}}</p>
+                        <p>mobile No:{{item.mobileNo}}</p>
+                        <p>saleDate:{{item.saleDate |date:'dd-MMM-yyyy'}}</p>
+                        <P>totalAmount {{item.totalAmount |currency:'INR'}}</P>
+                        
+
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
